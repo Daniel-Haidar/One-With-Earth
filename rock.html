@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>OWE: Mountain Climbing</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="assets/Main/home.ico">
+	<link rel="stylesheet" type="text/css" href="earth.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body id="bod">
+	<div id="wrapper">
+		<header>
+			<a href="index.html">
+				<div class="head">
+					<img src="assets/Main/rocksplash.jpg" alt="Home" class="tile" style="border-radius:0; width:100%;">
+					<div id="maintext" class="middle text">Welcome to One With Earth</div>
+				</div>
+			</a>
+			<div id="about" class="overlay">
+				<a href="javascript:hideAbout()" class="closebtn">&times;</a>
+				<div class="tab">
+					<table class="ntable">
+						<tr>
+							<th colspan=2>Site Creators</th>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Abdallah</td>
+							<td>Fahme</td>
+						</tr>
+						<tr>
+							<td>Batul</td>
+							<td>Mesmar</td>
+						</tr>
+						<tr>
+							<td>Daniel</td>
+							<td>Haidar</td>
+						</tr>
+						<tr>
+							<td>Hussein</td>
+							<td>Maatouk</td>
+						</tr>
+						<tr>
+							<td>Mohammad</td>
+							<td>Kassem</td>
+						</tr>
+						<tr>
+							<td>Mohammad</td>
+							<td>Mestrah</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</header>
+		<nav id="navcontent">
+			<div id="navbar">
+				<ul id="bar" class="ul">
+					<li>
+						<a href="javascript:darkmode()">
+							<span style="cursor:pointer">Dark Mode</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:showAbout()">
+							<span style="cursor:pointer">About Us</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:scrollDown()">
+							<span style="cursor:pointer">Book A Trip / Contact Us</span>
+						</a>
+					</li>
+					<li class="login-btn">
+						<a href="javascript:showLogin()">
+							<span style="cursor:pointer">Login</span>
+						</a>
+					</li>
+				</ul>
+				<div id="menu"><div>Menu</div>
+					<ul id="small-bar" class="ul">
+						<li>
+							<a href="javascript:darkmode()">
+								<span style="cursor:pointer">Dark Mode</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:showAbout()">
+								<span style="cursor:pointer">About Us</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:scrollDown()">
+								<span style="cursor:pointer">Book A Trip / Contact Us</span>
+							</a>
+						</li>
+						<li class="login-btn">
+							<a href="javascript:showLogin()">
+								<span style="cursor:pointer">Login</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<div>
+					<a href="hike.html">
+						<div class="container">
+							<img src="assets/Main/hike.jpg" alt="Hiking" class="tile" style="width:100%">
+							<div class="middle text">Hiking</div>
+						</div>
+					</a>
+				</div>
+				<div>
+					<a href="rock.html">
+						<div class="container">
+							<img src="assets/Main/rock.jpg" alt="Mountain Climbing" class="tile" style="width:100%">
+							<div class="middle text active">Mountain Climbing</div>
+						</div>
+					</a>
+				</div>
+				<div>
+					<a href="camp.html">
+						<div class="container">
+							<img src="assets/Main/camp.jpg" alt="Camping" class="tile" style="width:100%">
+							<div class="middle text">Camping</div>
+						</div>
+					</a>
+				</div>
+				<div>
+					<a href="ski.html">
+						<div class="container">
+							<img src="assets/Main/ski.jpg" alt="Skiing" class="tile" style="width:100%">
+							<div class="middle text">Skiing</div>
+						</div>
+					</a>
+				</div>
+				<div>
+					<a href="dive.html">
+						<div class="container2">
+							<img src="assets/Main/dive.jpg" alt="Diving" class="tile" style="width:100%">
+							<div class="middle text">Diving</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<main id="rmain">
+			<div id="mountain">
+				<h1>Mountain Climbing</h1>
+				<div id="intro">
+					<div>
+						Mountain Climbing, or Mountaineering, is the set of outdoor activities
+						that involves ascending tall mountains. Mountaineering-related activities
+						include traditional outdoor climbing, skiing and traversing via ferratas.
+						Indoor climbing, sport climbing and bouldering are also considered variants
+						of mountaineering by some.
+						<br>
+						<br>
+						Unlike most sports, mountaineering lacks widely applied formal rules,
+						regulations, and governance; mountaineers adhere to a large variety of
+						techniques and philosophies when climbing mountains. Numerous local alpine
+						clubs support mountaineers by hosting resources and social activities. A
+						federation of alpine clubs, the International Climbing and Mountaineering
+						Federation (UIAA), is the International Olympic Committee-recognized world
+						organization for mountaineering and climbing.
+						<br>
+						<sub>Source:&nbsp;<a href="https://en.wikipedia.org/wiki/Mountaineering" target="_blank">wikipedia.org</a></sub>
+					</div>
+				</div>
+			</div>
+			<br><br>
+			<hr>
+			<h2>Top Essential Equipment</h2>
+			<ol class="rol">
+				<li class="rcontainer left">
+					<div>
+						<span class="subtitle">Navigation</span>
+						<ul>
+							<li>Map</li>
+							<li>Compass</li>
+						</ul>
+					</div>
+					<div>
+						<span class="subtitle">Sun&nbsp;Protection</span>
+						<ul>
+							<li>Sunglasses</li>
+							<li>Sunscreen</li>
+						</ul>
+					</div>
+				</li>
+				<li class="rcontainer right">
+					<div>
+						<span class="subtitle">Insulation</span>
+						<ul>
+							<li>Extra&nbsp;Clothing</li>
+						</ul>
+					</div>
+					<div>
+						<span class="subtitle">Illumination</span>
+						<ul>
+						<li>Headlamp</li>
+						<li>Flashlight</li>
+						</ul>
+					</div>
+				</li>
+				<li style="clear: left;" class="rcontainer left">
+					<div style="cursor: pointer;" onmouseover="tooltip(this);" onmouseleave="hideimg(this);">
+						<span class="subtitle">First-Aid&nbsp;Supplies</span>
+					</div>
+					<div>
+						<span class="subtitle">Fire</span>
+						<ul>
+							<li>Waterproof&nbsp;Matches</li>
+							<li>Waterproof&nbsp;Lighter</li>
+							<li>Waterproof&nbsp;Candle</li>
+						</ul>
+					</div>
+				</li>
+				<li style="clear: right;" class="rcontainer right">
+					<div onmouseover="tooltip(this);" onmouseleave="hideimg(this);">
+						<span class="subtitle" style="cursor:pointer">Repair&nbsp;Kit&nbsp;&amp;&nbsp;Tools</span>
+					</div>
+					<div>
+						<span class="subtitle">Nutrition</span>
+						<ul>
+							<li>Extra&nbsp;Food</li>
+						</ul>
+					</div>
+				</li>
+				<li class="rcontainer center">
+					<div>
+						<span class="subtitle">Hydration</span>
+						<ul>
+						<li>Extra&nbsp;Water</li>
+						</ul>
+					</div>
+					<div>
+						<span class="subtitle">Emergency&nbsp;Shelter</span>
+						<ul>
+							<li>Tent/Plastic&nbsp;Tube</li>
+							<li>Tent/Garbage&nbsp;Bag</li>
+						</ul>
+					</div>
+				</li>
+				<li id="img" class="rcontainer center"></li>
+			</ol>
+			<hr><br><br>
+			<form id="book" action="rock.html" method="POST" onsubmit="return showThanks();">
+				<fieldset>
+					<legend>Book A Trip / Contact Us</legend>
+					<div style="text-align:center;">
+						<input type="radio" name="option" id="booktrip" onclick="bookTrip()"><span>Book A Trip</span>
+						<input type="radio" name="option" id="contactus" onclick="contactUs()" checked><span>Contact Us</span>
+					</div>
+					<br>
+					<div>
+						<label for="fname">First Name</label>
+						<input id="fname" type="text" name="firstname" placeholder="Name..." minlength="2" maxlength="20" required>
+					</div>
+					<div>
+						<label for="lname">Last&nbsp;Name:</label>
+						<input id="lname" type="text" name="lname" placeholder="Family Name..." minlength="2" maxlength="20" required>
+					</div>
+					<div>
+						<label for="email">Email&nbsp;Address:</label>
+						<input id="email" type="email" name="email" placeholder="email@address.com" required>
+					</div>
+					<div id="countries"></div>
+					<div>
+						<label for="phonenumber">Phone&nbsp;<span id="optional">(optional)</span>:</label>
+						<input id="phonenumber" type="tel" name="phonenumber" pattern="(^03|^70|^71|^76|^78|^79|^81)[0-9]{6}" placeholder="12 345 678" maxlength="8">
+					</div>
+					<div id="btns">
+						<br>
+						<input class="button" type="submit" value="Submit">
+						<input class="button" type="reset" onclick="contactUs()">
+					</div>
+				</fieldset>
+			</form>
+			<div id="toTop">
+				<div class="divbtn"><a class="button" href="javascript:scrollUp()">Back To Top</a></div>
+			</div>
+		</main>
+		<hr>
+		<footer>
+			<script> document.write(new Date().toLocaleDateString()); </script><br>
+			&copy; <span class="subtitle">One With Earth</span> 2022<br>
+			<a href="mailto:OneWithEarth@gmail.com">OneWithEarth@gmail.com</a>
+		</footer>
+	</div>
+	<div id="login">
+		<a href="javascript:hideLogin()" id="exit">&times;</a>
+		<div id="in-login">
+			<h3>Login</h3>
+			<form id="login-form" action="rock.html" method="POST">
+				<label for="username">Username: </label>
+				<input id="username" type="text" name="username"><span id="username-error"></span><br>
+				<label for="password">Password: </label>
+				<input id="password" type="password" name="password"><br>
+				<div class="divbtn" onclick="login()">Login</div>
+			</form>
+		</div>
+	</div>
+	<div id="thanks">
+		<p>Thank You <span id="name"></span> For Reaching Us!</p>
+		<p id="changable">We'll Contact You By Email As Soon As Possible</p>
+		<audio controls="controls">
+			<source src="assets/Home/info.mp3" type="audio/mpeg">
+		</audio>
+		<div class="divbtn" onclick="hideThanks()">OK</div>
+	</div>
+	<script>
+		addToolTips();
+		addCountries();
+	</script>
+</body>
+</html>

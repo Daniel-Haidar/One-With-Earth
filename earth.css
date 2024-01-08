@@ -1,0 +1,759 @@
+* { box-sizing: border-box; }
+html{overflow-x: hidden; scroll-behavior: smooth;}
+header, nav, main, footer { display: block; } 
+#nheader{
+	width: 100%;
+	background-color: #fff;
+}
+body{
+	margin:0;
+	background-color: #eee;
+	color: black;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav {
+	width:100%;
+	float:left;
+	clear: both;
+}
+hr {
+	width:70%;
+	border-radius: 100%;
+	border-color: #FF1111;
+}
+main{
+	margin:0;
+	margin-bottom: 30px;
+}
+footer{
+	text-align: center;
+	font-style: italic;
+	font-size: 1em;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+footer a {
+	display: inline-block;
+	text-decoration: none;
+	color: #ff1111;
+}
+#wrapper {transition: 0.2s ease;}
+#navbar {
+	width: 100%;
+	clear: both;
+	font-size: 1.5em;
+	background-color: #222;
+	transition: 0.2s ease;
+}
+#navcontent{
+	padding-bottom: 3%;
+	background-image: url("assets/Main/earth.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #EEE;
+}
+.ul li{float: left;}
+.ul > li a{
+	display: block;
+	color: #FF1111;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	user-select: none;
+	transition: 0.2s ease;
+}
+.ul > li a span{display: block;}
+.ul > li a:hover{
+	transition: 0.5s ease;
+	background-color: #FF1111;
+	color: white;
+}
+.active {
+	opacity: .7 !important;
+}
+.container {
+	background-color: black;
+	position: relative;
+	width: 44%;
+	float: left;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 3%;
+	border-radius: 1em;
+}
+.container2 {
+	background-color: black;
+	position: relative;
+	width: 44%;
+	float: left;
+	margin-right: 28%;
+	margin-left: 28%;
+	margin-top: 3%;
+	border-radius: 1em;
+}
+.head{
+	background-color: black;
+	position: relative;
+	width: 100%;
+	float: left;
+	margin: 0;
+}
+.tile {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: 1s ease;
+	backface-visibility: hidden;
+	border-radius: 0.25em;
+}
+.middle {
+	transition: 1s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+.container:hover .tile {opacity: 0.5;}
+.container:hover .middle {opacity: 1;}
+.container2:hover .tile {opacity: 0.5;}
+.container2:hover .middle {opacity: 1;}
+.head:hover .tile {opacity: 0.5;}
+.head:hover .middle {opacity: 1;}
+.text {
+	background-color: white;
+	color: black;
+	font-size: 2em;
+	padding: 16px 32px;
+	user-select: none;
+}
+.overlay {
+	height: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.9);
+	overflow-y: hidden;
+	transition: 0.5s ease;
+}
+.overlay-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	transition: 0.5s ease;
+}
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block;
+	transition: 0.5s ease;
+}
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+}
+@media screen and (max-height: 450px) {
+	.overlay a {font-size: 20px}
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+.darkmode {
+	background-color: #1D1F20 !important;
+	color: white;
+	transition: 0.2s ease;
+}
+.tab {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	width:auto;
+}
+.ntable {
+	color: white;
+	padding-left: 3%;
+	padding-right: 3%;
+	font-size: 36px;
+	text-align: center;
+}
+.ntable td { width: 360px; }
+.ntable th { font-size:50px; font-weight: normal; }
+div.line{
+	margin:0;
+	justify-content:center;
+}
+div.gallery {
+	float: left;
+	width: 25%;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+div.gallery:hover {
+	background-color: #FF0000;
+}
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+div.desc {
+	padding: 15px;
+	text-align: center;
+	font-size: 1vm;
+}
+.hike {
+	font-size: 30px;
+	width: 90%;
+	margin: auto;
+}
+.hike h1 {
+	font-size: 50px;
+	color: #1111FF;
+	text-align: center;
+	margin: 0;
+}
+.hike h2 {
+	font-size: 35px;
+	text-align: center;
+	margin: 0;
+}
+#shape {
+	display: inline-block;
+	margin-top: 10px;
+	transform: rotate(90deg);
+	font-size: 28px;
+}
+#mountain h1{
+	margin-top: 0;
+	font-size:40px;
+	color:#EE0000;
+	text-shadow: 1px 1px black; 
+}
+
+#mountain {
+	height: 720px;
+	clear: both;
+	background: rgba(0, 0, 0, .5) url("assets/Rock/backk.jpg");
+	background-blend-mode: darken;
+	background-position: center 15%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+#intro {
+	text-align: center;
+	color: #eee;
+}
+#intro div {
+	font-family: sans-serif;
+	font-size: 30px;
+	text-align: center;
+}
+#intro sub {
+	font-size: .55em;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: black;
+	padding: 2px;
+}
+#intro sub a{
+	text-decoration: none;
+}
+#intro sub a: visited{
+	text-decoration: none;
+	color: #000;
+}
+#rmain {
+	margin: 0;
+}
+#rmain > h2{
+	text-align:center;
+	font-size:2em;
+	clear:both;
+}
+.rol {
+	list-style-type: lower-roman;
+	display: inline-block;
+	text-align: left;
+	width: 100%;
+	padding: 10px;
+}
+.rcontainer {
+	width: 250px;
+	height: 200px;
+	border: 2px dashed #0000FF;
+	padding: 35px;
+	margin: 20px;
+}
+.rcontainer > div {
+	margin-top: 5px;
+}
+.subtitle{
+	font-weight: bold;
+}
+.left{ float: left; }
+.right{ float: right; }
+.center{ margin: auto; }
+.rol li { 
+	padding-top: 10px;
+}
+.rol > li:nth-child(5) { margin-top: 20px; }
+#img {
+	display: none;
+	margin-top: 40px;
+	border: 0;
+	background-size: 100% 100%;
+}
+
+#cbody{
+	margin: 0;
+	list-style-type: disc;
+	padding:20px;
+	background-color: #EEE;
+	background-image: url(assets/Camp/Forest.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 20px;
+}     
+.floaty{
+	float:right;
+	width: 600px;
+	border: 3px solid;
+	text-align: center;
+	padding: 10px;
+}
+.ch1{
+	opacity:1;
+	-webkit-text-stroke: 1px white;
+	font-size: 80px;
+	padding: 10px;
+	text-align: center;
+}
+.ch2{
+	margin: 0;
+}
+#cdiv {
+	border-style: solid;
+	border-width: 5px;
+	padding: 10px;
+}
+#cdiv2{
+	background-color: #EEE;
+}
+#cmain {
+	background: transparent;
+}
+.m{
+	text-align: center;
+	text-shadow: 0px 1px #FF1111;
+	font-weight: bold;
+	color: #1111FF;
+	font-size: 50px;
+}
+.l{
+	float: right;
+	font-size: large;
+}
+
+.hh1{
+	text-align: center;
+	color: #FF1111;
+	margin: 0;
+	font-size: 50px;
+}
+
+.hh2{
+	color: #FF1111;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 40px;
+	margin: 0;
+	text-shadow: 0px 1px #1111FF;
+}
+.htable{
+	width: 80%;
+	border-collapse: collapse;
+	margin: 10px;
+	margin: 0 auto !important;
+}
+.htable td{
+	border: 1px #0000ff solid;
+	padding: 5px;
+	border-collapse: collapse;
+}
+.htable th{
+	border: 1px #FF0000 solid;
+	padding: 5px;
+	border-collapse: collapse;
+}
+caption{
+	margin: 1em;
+	font-size: 200%;
+	font-weight: bold;
+	color: #1111FF;
+	text-shadow: 0px 1px #FF1111;
+}
+.htable tr:nth-of-type(even){
+	background-color: #1D1F20;
+	color:#FFF;
+}
+.htable tr:nth-of-type(odd){
+	background-color: #EEE;
+	color: #000;
+}
+.r{
+	float: right;
+	width: 50%;
+	font-size: 20px;
+	padding: 4%;
+}
+.ll{
+	padding: 4%;
+	font-size: 20px;
+} 
+audio{
+	display: block;
+	margin: auto;
+}
+.rer{
+	background-image: url(assets/Home/hhhh.jpg);
+	height: 700px;
+	font-size: 20px;
+	background-repeat:"no-repeat";
+	font-weight: bold;
+	background-position:left;
+	text-decoration : none;
+	text-align: center;
+	width:1333px;
+}
+.re{
+	background-image: url(f.jpg);
+	height: 700px;
+	font-size: 20px;
+	font-weight: bold;
+	background-position:left;
+	text-decoration : none;
+	text-align: center;
+	width:1333px;
+}
+.homeimg{
+	width: 100%;
+	height: 500px;
+	background-image: url(assets/Home/peakpx.jpg);
+	background-position: center 15%;
+	background-size: cover;
+	margin-top: 60px;
+}
+
+/* Start Styling Fake Login Form */
+#login {
+	transition: 0.2s ease;
+	display: none;
+	position: sticky;
+	bottom: 30%;
+	left: 25%;
+	width: 50vw;
+	height: 50vh;
+	border: 5px solid #000;
+	text-align: center;
+	background: #EEE;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	border-radius: 35px;
+}
+#login > a {
+	position: absolute;
+	padding: 5px;
+	margin-right: 15px;
+	font-size: 45px;
+	right: 0;
+	top: 0;
+	text-decoration: none;
+	color: #1111FF;
+}
+#login > a:hover {
+	color: #FF1111;
+}
+#login input {
+	margin: 10px;
+	height: 5vh;
+	width: 30%;
+	font-size: 1em;
+}
+#login-form a {
+	transition: 0.2s ease;
+	display: inline-block;
+	padding: 5px;
+	margin: 10px;
+	background-color: #eee;
+	border: 2px outset darkgray;
+	text-decoration: none;
+	color: #000;
+}
+#logout {
+	display: inline-block;
+	padding: 5px;
+	margin: 10px;
+	background-color: darkgray;
+	border: 2px outset darkgray;
+}
+#username-error{
+	color: red;
+	font-size: 10px;
+}
+/* End Styling Fake Login Form */
+
+/* Start Styling The 'Thanks' Pop-Up after Submitting the Form */
+#thanks {
+	display: none;
+	position: sticky;
+	bottom: 30%;
+	left: 25%;
+	width: 50vw;
+	height: 50vh;
+	border: 5px solid #000;
+	text-align: center;
+	background: #EEE;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+}
+/* End Styling 'Thanks' Pop-Up */
+
+.divbtn{
+	display: inline-block;
+	font-size: 16px;
+	padding: 14px 20px;
+	margin: 10px;
+	background-color: #FF1111;
+	border: none;
+	border-radius: 4px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+#toTop{
+	text-align: center;
+}
+.divbtn a{
+	text-decoration: none;
+	color: white;
+}
+.ll > ul{
+	margin-bottom: 30px;
+}
+.divbtn:hover{
+	background-color: #1111FF;
+}
+
+#bar{
+	transition: 0.2s ease;
+	opacity: 1;
+}
+#menu{
+	display: none;
+	background-color: #eee;
+	padding: 10px;
+	color: #ff1111;
+}
+#menu:hover{
+	background-color: #ff1111;
+	color: #eee;
+}
+#small-bar{
+	height: 0;
+	transition: opacity .7s ease-out;
+	opacity: 0;
+}
+#menu div{
+	margin-bottom: 10px;
+}
+
+@media (max-width: 850px){
+	.rcontainer {
+		float: none !important;
+		margin: 5px auto;
+	}
+	.rol > li:nth-child(5) { margin-top: 5px; }
+	#login{
+		width: 100%;
+		font-size: 20px;
+	}
+	#intro div{
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 680px){
+	#bar{
+		height: 0;
+		opacity: 0;
+	}
+	#menu{
+		display: block;
+		cursor: pointer;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#menu:hover #small-bar{
+		height: auto;
+		opacity: 1;
+	}
+	#menu li{
+		float: none;
+	}
+	#thanks{
+		font-size: 20px;
+	}
+	audio{
+		width: 200px;
+	}
+	.text{
+		font-size: 1em;
+	}
+	#intro div{
+		font-size: 20px;
+	}
+}
+
+
+
+#book {
+	margin: auto;
+	width:80%;
+}
+#book > fieldset
+{
+	border-color: #1111FF;
+	border-radius: 35px;
+	padding: 2%;
+}
+input[type=text], input[type=tel], input[type=email], input[type=next], select {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit], input[type=reset]{
+  width: 45%;
+  background-color: #FF1111;
+  color: white;
+  padding: 14px 20px;
+  margin: 2%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #1111FF;
+}
+legend{
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+div.skiline{
+	margin:0;
+	justify-content:center;
+}
+div.skigallery {
+	clear: both;
+	width: 100%;
+	height: 400px;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+div.skidesc {
+	right: 0;
+	float: left;
+	clear: right;
+	width: 55%;
+	padding: 30px;
+	font-size: 1vm;
+}
+.skiimg1 {
+	float: left;
+	width: 45%;
+	height: 400px;
+	background-image: url(assets/Ski/skiboard.jpg);
+	background-position: center;
+	background-repeat: none;
+	background-size: cover;
+}
+.skiimg2 {
+	float: left;
+	width: 45%;
+	height: 400px;
+	background-image: url(assets/Ski/skiresort.jpg);
+	background-position: center;
+	background-repeat: none;
+	background-size: cover;
+}
+.skiimg3 {
+	float: left;
+	width: 45%;
+	height: 400px;
+	background-image: url(assets/Ski/skiorigin.jpg);
+	background-position: center;
+	background-repeat: none;
+	background-size: cover;
+}
+.skibanner {
+	width: 100%;
+	height: 500px;
+	background-image: url(assets/Ski/skibanner.jpg);
+	background-position: center 65%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.til{
+	width: 90%;
+	font-size:30px;
+	margin:auto;
+	line-height: 100px;
+	color: #1111FF;
+}
+.par{
+	width: 90%;
+    font-size:20px;
+	margin:auto;
+}
+.dive{
+	width: 100%;
+	height: 500px;
+	background-image: url(assets/Dive/divebanner.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
